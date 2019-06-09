@@ -1,0 +1,13 @@
+# https://4sysops.com/archives/measure-object-computing-the-size-of-folders-and-files-in-powershell/
+
+# show size of folder
+"{0:N2} GB" -f ((gci Downloads | measure Length -s).Sum /1GB)
+
+# show size of file type in folder	
+(gci Downloads *.log | measure Length -s).Sum /1GB
+
+# show size of file type in folder	
+(gci Downloads *.log | measure Length -s).Sum /1GB
+
+# only 1 folder
+Get-ChildItem $directory -recurse | Measure-Object -property length -sum
