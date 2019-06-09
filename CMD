@@ -1,0 +1,5 @@
+# Show host name
+hostname
+
+# show free disk space and volumn
+wmic logicaldisk get size,freespace,caption
